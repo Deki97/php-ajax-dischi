@@ -30,6 +30,7 @@
     <main>
         <div class="container">
             <div class="main-wrapper">
+                <!-- Tramite un foreach sul $database stampo in pagina gli elementi -->
                 <?php foreach($database as $disc) { ?>
                     <div class="single-card">
                         <div class="poster">
