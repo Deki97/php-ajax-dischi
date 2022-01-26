@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header */
+header {
+    background-color: #2e3a46;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 50px;
+}
+/* End Header */
+
+
+/* Main */
+main {
+    background-color: #1e2d3b;
+    padding: 60px 0;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.single-card {
+    width: calc(100% / 5 - 40px);
+    margin: 10px 20px;
+    background-color: #2e3a46;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.title {
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+}
+
+.author,
+.year {
+    color: grey;
+}
