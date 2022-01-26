@@ -15,6 +15,9 @@
     <!-- Seconda Milestone:
     Attraverso l’utilizzo di axios: al caricamento della pagina axios chiederà, attraverso una chiamata api, i dischi a php e li stamperà attraverso vue. -->
 
+    <!-- Bonus:
+    Attraverso un’altra chiamata api, filtrare gli album per genere. -->
+
     <div id="root">
         <!-- Header -->
         <header>
@@ -26,7 +29,14 @@
         <!-- Main -->
         <main>
             <div class="container">
-                <div class="main-wrapper">
+                <select v-model="selectGenre" name="" id="">
+                    <option value="">All</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                    <div class="main-wrapper">
                         <div v-for="(disc, index) in discs" :key="index" class="single-card">
                             <div class="poster">
                                 <img :src="disc.poster" :alt="disc.title">
@@ -44,7 +54,7 @@
                                 {{ disc.year }}
                             </div>
                         </div>
-                </div>
+                    </div>
             </div>
         </main>
         <!-- End Main -->

@@ -3,7 +3,9 @@ Vue.config.devtools = true;
 const App = new Vue({
     el: '#root',
     data: {
-        discs: []
+        discs: [],
+        filteredDiscs: [],
+        selectGenre: ''
     },
     methods: {
         getDiscsApi: function() {
@@ -12,6 +14,16 @@ const App = new Vue({
                 this.discs = response.data;
             });
         }
+        // getDiscsFiltered: function() {
+        //     axios.get('http://localhost:8888/php-ajax-dischi/server.php', {
+        //         params: {
+        //             genre = this.selectGenre
+        //         }
+        //     })
+        //     .then((response) => {
+        //         this.filteredDiscs = response.data;
+        //     })
+        // }
     },
     created: function() {
         this.getDiscsApi();
